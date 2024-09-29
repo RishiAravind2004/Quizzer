@@ -35,7 +35,7 @@ for:
     - image: Visual Studio 2019
  
   after_build:
-  - 7z a Quizzer.zip %CD%\dist\*.exe
+  - 7z a Quizzer-win.zip %CD%\dist\*.exe
  
   artifacts:
   - path: Quizzer-win.zip
