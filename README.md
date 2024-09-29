@@ -1,3 +1,7 @@
+<p align="center">
+    <img src="icon.png" alt="Quizzer Icon">
+</p>
+
 # Quizzer
 
 Quizzer is an interactive application designed for creating and participating in quizzes, providing an engaging and user-friendly interface built with the Flet library. Users can effortlessly switch between roles as a Quiz Master (for creating quizzes) or a Quiz Competitor (for taking quizzes), ensuring a seamless experience for everyone involved.
