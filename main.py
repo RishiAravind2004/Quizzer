@@ -879,4 +879,4 @@ def main(page: ft.Page):
     )
 
 # launcher
-ft.app(main)
+ft.app(target=main, assets_dir="assets")
