@@ -425,7 +425,7 @@ def main(page: ft.Page):
                         )
                     )
             else:
-                password_field.error_text = "Please enter the password."
+                password_field.error_text = "Please Quiz Master password."
                 
             page.update()
 
