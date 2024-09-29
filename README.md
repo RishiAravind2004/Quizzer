@@ -1,14 +1,18 @@
 # Quizzer
 
-Quizzer is an interactive application that enables users to create and participate in quizzes. Users can take on the role of a Quiz Master to design quizzes or a Competitor to engage in quiz challenges.
+Quizzer is an interactive application designed for creating and participating in quizzes, providing an engaging and user-friendly interface built with the Flet library. Users can effortlessly switch between roles as a Quiz Master (for creating quizzes) or a Quiz Competitor (for taking quizzes), ensuring a seamless experience for everyone involved.
 
 ## Features
 
-- **Create Custom Quizzes**: As a Quiz Master, you can create quizzes with customizable settings such as the number of questions, options, and timing for each question.
-- **Participate in Quizzes**: As a Quiz Competitor, you can take quizzes, answer questions, and receive a score based on your performance.
-- **Secure Access**: The Quiz Master section is secured with a password for authorized access only.
-- **Track Performance**: After completing a quiz, competitors can review their score, the number of correctly and wrongly answered questions.
-- **Data Storage**: Quiz data is stored securely in Base64 encoded binary files.
+- **Create Custom Quizzes**: As a Quiz Master, you can craft quizzes tailored to your needs with customizable settings, including the number of questions, answer options, and timing for each question.
+  
+- **Participate in Quizzes**: As a Quiz Competitor, dive into quizzes, respond to questions, and receive scores reflecting your performance.
+  
+- **Secure Access**: The Quiz Master section is fortified with a password for authorized access only, ensuring quiz integrity and privacy.
+  
+- **Track Performance**: Competitors can review their scores, along with the number of correctly and incorrectly answered questions, providing valuable feedback after completing a quiz.
+  
+- **Data Storage**: All quiz data is securely stored in Base64 encoded binary files, ensuring both security and efficiency in data handling.
 
 ## Getting Started
 
@@ -47,15 +51,20 @@ Quizzer is an interactive application that enables users to create and participa
 
 2. Choose between being a Quiz Master or Quiz Competitor.
 
-- **Quiz Master**: Enter the password to access the quiz creation tools. The default password is `CopyCat-Developerz@rishi`.
-- **Quiz Competitor**: Select a quiz, enter your name, and the quiz key to start quizzing.
+   - **Quiz Master**: Enter the password to access the quiz creation tools. The default password is `CopyCat-Developerz@rishi`.
+   
+   - **Quiz Competitor**: Select a quiz, enter your name, and the quiz key to start quizzing.
 
-3. Follow on-screen instructions to create or participate in quizzes.
+3. Follow the on-screen instructions to create or participate in quizzes.
 
-### File Structure
+### Download Executable
+
+You can download the compiled executable version of Quizzer from the [Releases](https://github.com/RishiAravind2004/Quizzer/releases) section of this repository. This version allows you to run the application without requiring Python to be installed.
+
+## File Structure
 
 - **main.py**: The main script that runs the Quizzer application.
-- **Documents/Quizzer**: Directory where quiz data is stored as `.bin` files.
+- **Documents/Quizzer**: Directory where quiz data is securely stored as `.bin` files.
 
 ## Contributing
 
@@ -69,4 +78,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 - Developed by Rishi Aravind.
 - Visit the developer's [GitHub page](https://github.com/RishiAravind2004) for more projects and updates.
-
