@@ -155,6 +155,26 @@ def main(page: ft.Page):
                 print(f'Number of Options: {num_options_field.value}')
                 print(f'Timing: {timing_field.value} seconds')
 
+                def btn_click(e):
+                    page.close(dlg_modal)
+
+                dlg_modal = ft.AlertDialog(
+                    modal=True,
+                    title=ft.Text("Updated!"),
+                    content=ft.Column(
+                        controls=[
+                            ft.Text("Configurations are successfully updated!"),
+                        ],
+                        tight=True,
+                    ),
+                    actions=[
+                        ft.TextButton("Close", on_click=btn_click)
+                    ],
+                    actions_alignment=ft.MainAxisAlignment.END,
+                )
+
+                page.open(dlg_modal)
+
             # scrollable container for question column
             scrollable_container = ft.Container(
                 content=question_column,
@@ -543,14 +563,15 @@ def main(page: ft.Page):
                     def visit_github(e):
                         page.launch_url("https://github.com/RishiAravind2004")
 
-                    page.add(ft.Text("Quiz Completed", size=23, color="red", weight=ft.FontWeight.BOLD))
+                    page.add(ft.Text("Quiz Completed", size=23, color="orange", weight=ft.FontWeight.BOLD))
                     page.add(ft.Text(""))
                     page.add(ft.Text(f"Hey '{quiz_data['Competitor']['name']}'! you have,"))
                     page.add(ft.Text(f"Date of Quiz taken: {quiz_data['Competitor']['date & time']}"))
                     page.add(ft.Text(f"Scored: {quiz_data['Competitor']['scored']}, Out of {quiz_data['Details']['num_questions']}"))
                     page.add(ft.Text(f"Correctly Answered: {quiz_data['Competitor']['correctly_answered']}"))
                     page.add(ft.Text(f"Wrongly Answered: {quiz_data['Competitor']['wrongly_answered']}"))
-                    page.add(ft.Text("Congratulations! Thank you for participating. We hope this quiz has been a valuable challenge to your knowledge. Whether the result is good or bad, we encourage you to keep learning and growing!", size=15, weight="bold"))
+                    page.add(ft.Text("Congratulations! Thank you for participating. We hope this quiz has been a valuable challenge to your knowledge,", size=15, weight="bold"))
+                    page.add(ft.Text("Whether the result is good or bad, we encourage you to keep learning and growing!", size=15, weight="bold"))
                     page.add(ft.TextButton(text="By Developer: Rishi Aravind! :)", on_click = visit_github))
                     page.add(ft.ElevatedButton("Back to Main Menu!", on_click=Session_Page))
                 else:
@@ -770,6 +791,7 @@ def main(page: ft.Page):
 
         # selecting quiz in directory
         else:
+            page.add(ft.IconButton(icon=ft.icons.ARROW_BACK, on_click=Session_Page))
             page.add(ft.Text("Pick Your Challenge...", size=18, weight="bold"))
 
             file_containers = [
