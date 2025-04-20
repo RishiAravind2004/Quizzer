@@ -400,7 +400,7 @@ def main(page: ft.Page):
         def login_action(e):
             password = password_field.value
             if password:
-                if password != "CopyCat-Developerz@rishi":
+                if password != "copycat":
                     password_field.error_text = "Incorrect password. Please try again."
                 else:
                     page.controls.clear()
@@ -559,9 +559,6 @@ def main(page: ft.Page):
                     os.rename(f"{Quizz_Folder_Path}\\{quiz_data['Details']['quiz_name']}.bin", f"{Quizz_Folder_Path}\\{quiz_data['Details']['quiz_name']}[Finished].bin")
                     
                     page.controls.clear()
-                    
-                    def visit_github(e):
-                        page.launch_url("https://github.com/RishiAravind2004")
 
                     page.add(ft.Text("Quiz Completed", size=23, color="orange", weight=ft.FontWeight.BOLD))
                     page.add(ft.Text(""))
@@ -572,7 +569,6 @@ def main(page: ft.Page):
                     page.add(ft.Text(f"Wrongly Answered: {quiz_data['Competitor']['wrongly_answered']}"))
                     page.add(ft.Text("Congratulations! Thank you for participating. We hope this quiz has been a valuable challenge to your knowledge,", size=15, weight="bold"))
                     page.add(ft.Text("Whether the result is good or bad, we encourage you to keep learning and growing!", size=15, weight="bold"))
-                    page.add(ft.TextButton(text="By Developer: Rishi Aravind! :)", on_click = visit_github))
                     page.add(ft.ElevatedButton("Back to Main Menu!", on_click=Session_Page))
                 else:
                     current_question_index += 1
@@ -855,9 +851,6 @@ def main(page: ft.Page):
 #       INITAL PAGE
 #
 
-    # initial screen
-    def visit_github(e):
-        page.launch_url("https://github.com/RishiAravind2004")
         
     page.add(
         ft.Row(
@@ -865,7 +858,6 @@ def main(page: ft.Page):
                 ft.Column(
                     controls=[
                         ft.Text("Welcome to Quizzer! Create your own quizzes or challenge your knowledge with us. Let the fun begin!", size=24, weight="bold"),
-                        ft.TextButton(text="Developer: Rishi Aravind!", on_click = visit_github),
                         ft.ElevatedButton("Let's GO!", on_click=Session_Page)
                     ],
                     alignment=ft.MainAxisAlignment.CENTER,
